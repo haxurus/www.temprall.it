@@ -101,31 +101,46 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-kicker">Siti produttivi</p>
-          <h2>Mappa e legenda</h2>
-          <p>La mappa riprende lo schema fornito dal cliente e lo rende leggibile anche da mobile. I colori distinguono siti produttivi, reparti e accessi.</p>
+          <h2>Mappa degli stabilimenti</h2>
+          <p>La fotografia aerea mostra la distribuzione dei siti produttivi, dei reparti e degli accessi TEMPRALL. I riferimenti numerati sono suddivisi per colore.</p>
         </div>
+
         <div class="production-map">
-          <div class="site-map" aria-label="Schema dei siti produttivi TEMPRALL">
-            <span class="map-building building-a"></span><span class="map-building building-b"></span><span class="map-building building-c"></span><span class="map-building building-d"></span><span class="map-building building-e"></span>
-            <button class="site-pin red pin-r1" data-map-info="Sito produttivo 1 - Forni 17, 15, 16, 13">1</button>
-            <button class="site-pin red pin-r2" data-map-info="Sito produttivo 2 - Forni 9, 10, 11, 12, 18">2</button>
-            <button class="site-pin red pin-r3" data-map-info="Sito produttivo 3 - Forni 3, 6, 7, 4">3</button>
-            <button class="site-pin red pin-r4" data-map-info="Sito produttivo 4 - Forni 21, 22, 23, 24, 25, 26">4</button>
-            <button class="site-pin red pin-r5" data-map-info="Sito produttivo 5 - Forni 1, 2, 8">5</button>
-            <button class="site-pin red pin-r6" data-map-info="Sito produttivo 6 - Forni 5, 14, 19, 20">6</button>
-            <button class="site-pin green pin-g1" data-map-info="Reparto 1 - Carpenteria interna per manutenzione cesti">1</button>
-            <button class="site-pin green pin-g2" data-map-info="Reparto 2 - Raddrizzatura">2</button>
-            <button class="site-pin green pin-g3" data-map-info="Reparto 3 - Visivo e etichettatura">3</button>
-            <button class="site-pin green pin-g4" data-map-info="Reparto 4 - Macchina prova trazioni">4</button>
-            <button class="site-pin blue pin-b1" data-map-info="Accesso 1 - Via Cavalier Pierino Migliorati, 22">1</button>
-            <button class="site-pin blue pin-b2" data-map-info="Accesso 2 - Via Cavalier Pierino Migliorati, 28B">2</button>
-            <button class="site-pin blue pin-b3" data-map-info="Accesso 3 - Via degli Artigiani 25">3</button>
-          </div>
-          <div class="map-info" id="map-info">Seleziona un indicatore per vedere i dettagli.</div>
+          <figure class="production-map-photo">
+            <img src="img/capannoni_numerati.png" alt="Mappa aerea numerata dei siti produttivi TEMPRALL">
+          </figure>
+
           <div class="map-legend-grid">
-            <div class="map-legend-card"><h3><span class="legend-dot red"></span>Siti produttivi</h3><p>1: Forni 17,15,16,13<br>2: Forni 9,10,11,12,18<br>3: Forni 3,6,7,4<br>4: Forni 21-26<br>5: Forni 1,2,8<br>6: Forni 5,14,19,20</p></div>
-            <div class="map-legend-card"><h3><span class="legend-dot green"></span>Reparti</h3><p>1: Carpenteria interna<br>2: Raddrizzatura<br>3: Visivo e etichettatura<br>4: Prova trazioni</p></div>
-            <div class="map-legend-card"><h3><span class="legend-dot blue"></span>Accessi</h3><p>1: Via Cav. P. Migliorati 22<br>2: Via Cav. P. Migliorati 28B<br>3: Via degli Artigiani 25</p></div>
+            <article class="map-legend-card map-legend-red">
+              <h3><span class="legend-dot red"></span>In rosso - Siti produttivi</h3>
+              <ol>
+                <li><strong>1</strong><span>Forni 17, 15, 16, 13</span></li>
+                <li><strong>2</strong><span>Forni 9, 10, 11, 12, 18</span></li>
+                <li><strong>3</strong><span>Forni 3, 6, 7, 4</span></li>
+                <li><strong>4</strong><span>Forni 21, 22, 23, 24, 25, 26</span></li>
+                <li><strong>5</strong><span>Forni 1, 2, 8</span></li>
+                <li><strong>6</strong><span>Forni 5, 14, 19, 20</span></li>
+              </ol>
+            </article>
+
+            <article class="map-legend-card map-legend-green">
+              <h3><span class="legend-dot green"></span>In verde - Reparti</h3>
+              <ol>
+                <li><strong>1</strong><span>Carpenteria interna per manutenzione cesti</span></li>
+                <li><strong>2</strong><span>Reparto raddrizzatura</span></li>
+                <li><strong>3</strong><span>Reparto visivo e etichettatura</span></li>
+                <li><strong>4</strong><span>Macchina prova trazioni</span></li>
+              </ol>
+            </article>
+
+            <article class="map-legend-card map-legend-blue">
+              <h3><span class="legend-dot blue"></span>In blu - Accessi</h3>
+              <ol>
+                <li><strong>1</strong><span>Via Cavalier Pierino Migliorati, 22</span></li>
+                <li><strong>2</strong><span>Via Cavalier Pierino Migliorati, 28B</span></li>
+                <li><strong>3</strong><span>Via degli Artigiani 25</span></li>
+              </ol>
+            </article>
           </div>
         </div>
       </div>
@@ -181,12 +196,6 @@
       const isOpen = nav.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(isOpen));
     });
-  </script>
-<script>
-    document.querySelectorAll('.site-pin').forEach(pin => pin.addEventListener('click', () => {
-      const info = document.getElementById('map-info');
-      if (info) info.textContent = pin.dataset.mapInfo;
-    }));
   </script>
 </body>
 </html>
