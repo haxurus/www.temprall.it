@@ -1909,3 +1909,13 @@ h2 { margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spa
   .site-map { min-height: 380px; border-radius: 22px; }
   .site-pin { width: 32px; height: 32px; }
 }
+
+/* Pin map override */
+.site-pin {
+  border-radius: 999px;
+  transform: none;
+  color: #fff;
+  font-size: 12px;
+  line-height: normal;
+}
+.site-pin::after { display: none; }
