@@ -1958,3 +1958,13 @@ h2 { margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spa
   .furnace-compact-nav{align-items:stretch;flex-direction:column;text-align:center}
   .furnace-compact-nav .nav-side,.furnace-compact-nav .nav-side:last-child{text-align:center}
 }
+
+/* Restore previous site photo on production map */
+.site-map {
+  background:
+    linear-gradient(rgba(31,41,51,.10), rgba(31,41,51,.10)),
+    url('../img/hero-bg.png') center/cover no-repeat;
+}
+.site-map::before,
+.site-map::after,
+.site-map .map-building { display:none; }
