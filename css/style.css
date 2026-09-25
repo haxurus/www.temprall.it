@@ -1968,3 +1968,7 @@ h2 { margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spa
 .site-map::before,
 .site-map::after,
 .site-map .map-building { display:none; }
+
+/* Furnace top actions alignment */
+.furnace-compact-head { align-items: flex-start; }
+.furnace-compact-actions { padding-top: 2px; }
