@@ -1972,3 +1972,46 @@ h2 { margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spa
 /* Furnace top actions alignment */
 .furnace-compact-head { align-items: flex-start; }
 .furnace-compact-actions { padding-top: 2px; }
+
+/* Furnace contrast pass - 2026-09-25 */
+.compact-furnace {
+  background:
+    linear-gradient(180deg, #f7f8fa 0%, #ffffff 34%, #fff7ed 100%);
+}
+.furnace-compact-head {
+  padding: 24px 26px;
+  border: 1px solid rgba(236,239,243,.95);
+  border-radius: 24px;
+  background: #f3f4f6;
+  box-shadow: 0 12px 34px rgba(31,41,51,.05);
+}
+.furnace-compact-photo {
+  border: 1px solid rgba(31,41,51,.08);
+  background: #e5e7eb;
+}
+.furnace-compact-info {
+  background: linear-gradient(145deg, #fff7ed 0%, #ffffff 72%);
+  border-color: rgba(242,138,23,.25);
+}
+.furnace-meta li {
+  background: #f8fafc;
+}
+.furnace-compact-nav {
+  margin-top: 26px;
+  padding: 22px 24px;
+  border-top: 0;
+  border-radius: 20px;
+  background: #1f2933;
+  color: #fff;
+}
+.furnace-compact-nav a {
+  color: #fff;
+}
+.furnace-compact-nav .btn-secondary {
+  background: rgba(255,255,255,.08);
+  color: #fff !important;
+  border-color: rgba(255,255,255,.35);
+}
+.furnace-compact-nav .btn-secondary:hover {
+  background: rgba(255,255,255,.14);
+}
