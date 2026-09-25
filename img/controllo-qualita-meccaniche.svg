@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-label="Prove meccaniche">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1f2933" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" rx="34" fill="url(#g)"/>
+  <circle cx="755" cy="90" r="150" fill="#f28a17" opacity=".14"/>
+  <rect x="90" y="120" width="300" height="360" rx="26" fill="#ffffff" stroke="#eceff3" stroke-width="8"/>
+  <rect x="150" y="180" width="180" height="48" rx="12" fill="#f28a17" opacity=".9"/>
+  <rect x="160" y="260" width="160" height="160" rx="80" fill="#1f2933" opacity=".88"/>
+  <rect x="500" y="178" width="270" height="34" rx="17" fill="#f28a17" opacity=".9"/>
+  <rect x="500" y="244" width="230" height="24" rx="12" fill="#9fa2a8" opacity=".5"/>
+  <rect x="500" y="294" width="290" height="24" rx="12" fill="#9fa2a8" opacity=".35"/>
+  <rect x="500" y="344" width="210" height="24" rx="12" fill="#9fa2a8" opacity=".35"/>
+  <text x="90" y="555" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">Prove meccaniche</text>
+  <text x="90" y="590" fill="#ffd7aa" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Macchina Metrocom certificata Accredia</text>
+</svg>

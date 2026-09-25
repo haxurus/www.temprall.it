@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impregnazione | TEMPRALL</title>
+  <meta name="description" content="Servizio di impregnazione per la riparazione delle microporosità nei componenti pressofusi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="TEMPRALL home">
+        <img src="img/logo.png" alt="TEMPRALL">
+      </a>
+
+      <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="chi-siamo.html">Azienda</a>
+        <div class="nav-item has-dropdown">
+          <a class="is-active" href="index.html#servizi">Servizi</a>
+          <div class="dropdown" aria-label="Sottomenù servizi">
+            <div class="dropdown-group has-submenu">
+              <a class="dropdown-parent" href="index.html#servizi">Lavorazioni</a>
+              <div class="submenu" aria-label="Sottomenù lavorazioni">
+                <a href="trattamento-termico-leghe-leggere.html">Trattamento termico leghe leggere</a>
+                <a href="sbavatura-sabbiatura.html">Sbavatura e sabbiatura</a>
+                <a href="raddrizzatura.html">Raddrizzatura</a>
+                <a href="impregnazione.html">Impregnazione</a>
+              </div>
+            </div>
+            <a href="trasporti.html">Trasporti</a>
+            <a href="analisi-preventivi.html">Analisi preventivi</a>
+            <a href="controllo-qualita.html">Controllo qualità</a>
+          </div>
+        </div>
+        <a href="whistle-blowing.html">Whistle blowing</a>
+        <a class="nav-cta" href="contatti.html">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="page-hero work-hero impregnation-hero">
+      <div class="hero-bg"></div>
+      <div class="container page-hero-content">
+        <p class="eyebrow">Lavorazioni</p>
+        <h1>Impregnazione</h1>
+        <p class="lead">Trattamento dedicato alla chiusura delle microporosità e al miglioramento della tenuta dei componenti.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contatti.html">Richiedi informazioni</a>
+          <a class="btn btn-secondary" href="index.html#servizi">Torna ai servizi</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work-intro-section">
+      <div class="container work-intro-grid">
+        <div>
+          <p class="section-kicker">Processo specializzato</p>
+          <h2>Riparazione delle microporosità nei pezzi pressofusi</h2>
+        </div>
+        <div class="rich-text">
+          <p>La fase di impregnazione viene eseguita esternamente con macchina acquistata da Munari.</p>
+          <p>Il trattamento permette di riparare le microporosità che producono fughe, tramite prodotto formulato a base di polisilossani e sali sodici di acido polisilicico.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work-feature-section">
+      <div class="container work-feature-grid">
+        <figure class="work-image-card work-image-large">
+          <img src="img/impregnazione.jpg" alt="Impianto di impregnazione">
+        </figure>
+        <div class="work-content-card">
+          <img class="supplier-logo" src="img/munari-logo.svg" alt="Munari">
+          <h2>Una lavorazione per migliorare tenuta e affidabilità</h2>
+          <p>Il prodotto penetra nelle porosità e, in seguito a reazione chimica, si converte in un materiale elastico insolubile in acqua e in altri solventi, ancorandosi alle pareti delle porosità del materiale impregnato.</p>
+          <ul class="check-list">
+            <li>Riduzione delle fughe dovute a microporosità</li>
+            <li>Applicazione su componenti in leghe leggere</li>
+            <li>Processo mirato alla continuità funzionale del pezzo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work-cta-section">
+      <div class="container quality-box">
+        <div>
+          <p class="section-kicker">Hai un componente da valutare?</p>
+          <h2>Verifichiamo la lavorazione più adatta</h2>
+          <p>Contattaci per valutare materiale, criticità e requisiti richiesti dal componente.</p>
+        </div>
+        <a class="btn btn-primary" href="contatti.html">Contatta TEMPRALL</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>TEMPRALL srl Società unipersonale</strong>
+        <p>Via Cav Pierino Migliorati 28-B<br>25020 Pavone del Mella (Brescia)</p>
+      </div>
+      <div>
+        <p>Tel.: <a href="tel:+390309590053">+39 030 9590053</a><br>Fax: +39 030 2059690</p>
+        <p>P.IVA: 03044750986</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy policy</a>
+        <a href="cookie-policy.html">Cookie policy</a>
+        <a href="whistle-blowing.html">Whistle blowing</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
+</body>
+</html>

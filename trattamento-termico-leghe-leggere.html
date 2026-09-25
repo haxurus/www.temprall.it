@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trattamento termico leghe leggere | TEMPRALL</title>
+  <meta name="description" content="Trattamenti termici per leghe leggere: solubilizzazione, invecchiamento, stabilizzazione, distensione e sterratura.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .thermal-overview-section { background: #fff; }
+    .thermal-overview-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .thermal-layout-section {
+      padding-top: 0;
+      background: linear-gradient(180deg, #fff7ed 0%, #fff 100%);
+    }
+    .thermal-layout {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .thermal-card,
+    .furnaces-card {
+      padding: 34px;
+      border: 1px solid rgba(236,239,243,.92);
+      border-radius: 30px;
+      background: rgba(255,255,255,.94);
+      box-shadow: 0 18px 48px rgba(31, 41, 51, .07);
+    }
+    .thermal-card h2,
+    .furnaces-card h2 { margin-bottom: 22px; }
+    .thermal-list {
+      display: grid;
+      gap: 13px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .thermal-list li {
+      position: relative;
+      padding-left: 34px;
+      color: var(--text);
+      line-height: 1.55;
+      font-weight: 600;
+    }
+    .thermal-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--orange);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .furnace-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .furnace-btn {
+      min-height: 56px;
+      padding: 0 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(242,138,23,.28);
+      background: linear-gradient(135deg, #fff 0%, #fff7ed 100%);
+      color: var(--orange-dark);
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 10px 26px rgba(31, 41, 51, .05);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .furnace-btn:hover {
+      transform: translateY(-3px);
+      border-color: rgba(242,138,23,.52);
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(242, 138, 23, .22);
+    }
+    .thermal-note-section { padding-top: 0; background: #fff; }
+    .thermal-note-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .thermal-note-card {
+      min-height: 230px;
+      padding: 30px;
+      border: 1px solid rgba(236,239,243,.92);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 16px 42px rgba(31, 41, 51, .06);
+    }
+    .thermal-note-card span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 24px;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      font-weight: 800;
+    }
+    .thermal-note-card h3 {
+      margin: 0 0 12px;
+      font-size: 23px;
+      letter-spacing: -.03em;
+    }
+    .thermal-note-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    @media (max-width: 980px) {
+      .thermal-overview-grid,
+      .thermal-layout { grid-template-columns: 1fr; }
+      .furnace-grid { grid-template-columns: repeat(3, 1fr); }
+      .thermal-note-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .thermal-card,
+      .furnaces-card { padding: 26px; }
+      .furnace-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="TEMPRALL home">
+        <img src="img/logo.png" alt="TEMPRALL">
+      </a>
+
+      <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="chi-siamo.html">Azienda</a>
+        <div class="nav-item has-dropdown">
+          <a class="is-active" href="index.html#servizi">Servizi</a>
+          <div class="dropdown" aria-label="Sottomenù servizi">
+            <div class="dropdown-group has-submenu">
+              <a class="dropdown-parent is-active" href="index.html#servizi">Lavorazioni</a>
+              <div class="submenu" aria-label="Sottomenù lavorazioni">
+                <a class="is-active" href="trattamento-termico-leghe-leggere.html">Trattamento termico leghe leggere</a>
+                <a href="sbavatura-sabbiatura.html">Sbavatura e sabbiatura</a>
+                <a href="raddrizzatura.html">Raddrizzatura</a>
+                <a href="impregnazione.html">Impregnazione</a>
+              </div>
+            </div>
+            <a href="trasporti.html">Trasporti</a>
+            <a href="analisi-preventivi.html">Analisi preventivi</a>
+            <a href="controllo-qualita.html">Controllo qualità</a>
+          </div>
+        </div>
+        <a href="whistle-blowing.html">Whistle blowing</a>
+        <a class="nav-cta" href="contatti.html">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero work-hero thermal-hero">
+      <div class="hero-bg"></div>
+      <div class="container page-hero-content">
+        <p class="eyebrow">Lavorazioni</p>
+        <h1>Trattamento termico leghe leggere</h1>
+        <p class="lead">Trattamenti termici per leghe d’alluminio finalizzati a migliorare caratteristiche meccaniche, resistenza alla corrosione e stabilità dimensionale.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contatti.html">Richiedi informazioni</a>
+          <a class="btn btn-secondary" href="#forni">Vai ai forni</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section thermal-overview-section">
+      <div class="container thermal-overview-grid">
+        <div>
+          <p class="section-kicker">Processi termici</p>
+          <h2>Trattamenti per componenti in leghe leggere</h2>
+        </div>
+        <div class="rich-text">
+          <p>I trattamenti termici influenzano le caratteristiche meccaniche, la resistenza a corrosione e la stabilità dimensionale in esercizio delle leghe d’alluminio.</p>
+          <p>Presso gli stabilimenti TEMPRALL vengono trattate molte leghe, sia derivanti da fusione sia da stampaggio a caldo o a freddo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="forni" class="section thermal-layout-section">
+      <div class="container thermal-layout">
+        <aside class="thermal-card">
+          <p class="section-kicker">Eseguiamo</p>
+          <h2>Tipologie di trattamento</h2>
+          <ul class="thermal-list">
+            <li>Solubilizzazione e invecchiamento artificiale T6</li>
+            <li>Solubilizzazione e invecchiamento artificiale T7</li>
+            <li>Solubilizzazione e invecchiamento naturale T4</li>
+            <li>Solubilizzazione e invecchiamento parziale T64</li>
+            <li>Invecchiamento artificiale T5</li>
+            <li>Stabilizzazione e distensione</li>
+            <li>Sterratura</li>
+          </ul>
+        </aside>
+
+        <section class="furnaces-card" aria-labelledby="forni-title">
+          <p class="section-kicker">Impianti</p>
+          <h2 id="forni-title">Schede tecniche dei forni</h2>
+          <div class="furnace-grid">
+            <a class="furnace-btn" href="forno-01.html">Forno 01</a>
+            <a class="furnace-btn" href="forno-02.html">Forno 02</a>
+            <a class="furnace-btn" href="forno-03.html">Forno 03</a>
+            <a class="furnace-btn" href="forno-04.html">Forno 04</a>
+            <a class="furnace-btn" href="forno-05.html">Forno 05</a>
+            <a class="furnace-btn" href="forno-06.html">Forno 06</a>
+            <a class="furnace-btn" href="forno-07.html">Forno 07</a>
+            <a class="furnace-btn" href="forno-08.html">Forno 08</a>
+            <a class="furnace-btn" href="forno-09.html">Forno 09</a>
+            <a class="furnace-btn" href="forno-10.html">Forno 10</a>
+            <a class="furnace-btn" href="forno-11.html">Forno 11</a>
+            <a class="furnace-btn" href="forno-12.html">Forno 12</a>
+            <a class="furnace-btn" href="forno-13.html">Forno 13</a>
+            <a class="furnace-btn" href="forno-14.html">Forno 14</a>
+            <a class="furnace-btn" href="forno-15.html">Forno 15</a>
+            <a class="furnace-btn" href="forno-16.html">Forno 16</a>
+            <a class="furnace-btn" href="forno-17.html">Forno 17</a>
+            <a class="furnace-btn" href="forno-18.html">Forno 18</a>
+            <a class="furnace-btn" href="forno-19.html">Forno 19</a>
+            <a class="furnace-btn" href="forno-20.html">Forno 20</a>
+            <a class="furnace-btn" href="forno-21.html">Forno 21</a>
+            <a class="furnace-btn" href="forno-22.html">Forno 22</a>
+            <a class="furnace-btn" href="forno-23.html">Forno 23</a>
+            <a class="furnace-btn" href="forno-24.html">Forno 24</a>
+            <a class="furnace-btn" href="forno-25.html">Forno 25</a>
+            <a class="furnace-btn" href="forno-26.html">Forno 26</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section thermal-note-section">
+      <div class="container thermal-note-grid">
+        <article class="thermal-note-card">
+          <span>01</span>
+          <h3>Controllo del processo</h3>
+          <p>Ogni trattamento viene gestito con attenzione ai parametri richiesti dal cliente e alla ripetibilità del ciclo.</p>
+        </article>
+        <article class="thermal-note-card">
+          <span>02</span>
+          <h3>Flessibilità produttiva</h3>
+          <p>La disponibilità di più impianti consente di organizzare lavorazioni differenti in base a geometria, materiale e specifiche tecniche.</p>
+        </article>
+        <article class="thermal-note-card">
+          <span>03</span>
+          <h3>Integrazione qualità</h3>
+          <p>I trattamenti possono essere collegati a controlli, prove e documentazione secondo le esigenze della commessa.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section work-cta-section">
+      <div class="container quality-box">
+        <div>
+          <p class="section-kicker">Hai una commessa da valutare?</p>
+          <h2>Verifichiamo il trattamento più adatto</h2>
+          <p>Contattaci per valutare materiale, geometria del pezzo, requisiti meccanici e ciclo richiesto.</p>
+        </div>
+        <a class="btn btn-primary" href="contatti.html">Contatta TEMPRALL</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>TEMPRALL srl Società unipersonale</strong>
+        <p>Via Cav Pierino Migliorati 28-B<br>25020 Pavone del Mella (Brescia)</p>
+      </div>
+      <div>
+        <p>Tel.: <a href="tel:+390309590053">+39 030 9590053</a><br>Fax: +39 030 2059690</p>
+        <p>P.IVA: 03044750986</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy policy</a>
+        <a href="cookie-policy.html">Cookie policy</a>
+        <a href="whistle-blowing.html">Whistle blowing</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
+</body>
+</html>
