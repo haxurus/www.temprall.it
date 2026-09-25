@@ -2015,3 +2015,115 @@ h2 { margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spa
 .furnace-compact-nav .btn-secondary:hover {
   background: rgba(255,255,255,.14);
 }
+
+/* Furnace light redesign - 2026-09-25 */
+.compact-furnace {
+  background:
+    radial-gradient(circle at 88% 10%, rgba(242,138,23,.08), transparent 28%),
+    linear-gradient(180deg, #fff 0%, #fffdf9 100%);
+}
+.furnace-compact-head {
+  padding: 0;
+  margin-bottom: 34px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.furnace-compact-head .lead {
+  color: #737373;
+}
+.furnace-compact-photo {
+  border: 0;
+  background: #fffaf4;
+  box-shadow: 0 16px 38px rgba(126,93,54,.08);
+}
+.furnace-compact-info {
+  position: relative;
+  padding: 10px 0 10px 30px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.furnace-compact-info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 99px;
+  background: linear-gradient(180deg, var(--orange), rgba(242,138,23,.18));
+}
+.furnace-compact-info h2 {
+  margin: 14px 0 12px;
+}
+.furnace-compact-info > p {
+  max-width: 560px;
+  color: #737373;
+}
+.furnace-tags {
+  margin-top: 4px;
+}
+.furnace-tag {
+  background: #fff7ed;
+  border: 0;
+  color: var(--orange-dark);
+}
+.furnace-meta {
+  grid-template-columns: 1fr 1fr;
+  gap: 0 26px;
+  margin-top: 24px;
+  border-top: 1px solid #f3e7da;
+}
+.furnace-meta li {
+  padding: 16px 0;
+  border: 0;
+  border-bottom: 1px solid #f3e7da;
+  border-radius: 0;
+  background: transparent;
+}
+.furnace-meta strong {
+  color: var(--orange-dark);
+}
+.furnace-meta span {
+  color: #767676;
+}
+.furnace-compact-nav {
+  margin-top: 30px;
+  padding: 18px 22px;
+  border: 1px solid #f3e7da;
+  border-radius: 18px;
+  background: #fffaf4;
+  color: var(--text);
+}
+.furnace-compact-nav a {
+  color: var(--orange-dark);
+}
+.furnace-compact-nav .btn-secondary {
+  background: #fff;
+  color: var(--orange-dark) !important;
+  border-color: rgba(242,138,23,.24);
+}
+.furnace-compact-nav .btn-secondary:hover {
+  background: #fff4e8;
+}
+@media(max-width:850px){
+  .furnace-compact-info {
+    padding: 26px 0 0;
+  }
+  .furnace-compact-info::before {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    width: 64px;
+    height: 3px;
+  }
+}
+@media(max-width:560px){
+  .furnace-meta {
+    grid-template-columns: 1fr;
+  }
+}
