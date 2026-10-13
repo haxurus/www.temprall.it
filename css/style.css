@@ -941,6 +941,7 @@ h3 { letter-spacing: -.02em; }
 .furnace-btn:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(31, 41, 51, .25); }
 .furnace-btn:hover::before { transform: scale(1.1); }
 .furnace-btn:hover::after { background: linear-gradient(180deg, rgba(217, 111, 0, .1) 10%, rgba(217, 111, 0, .85) 100%); }
+.furnace-btn[data-nophoto]::before { content: "Foto in arrivo"; display: flex; align-items: flex-start; justify-content: flex-end; padding: 14px; font-size: 10.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255, 255, 255, .5); }
 .furnace-btn.is-unavailable { opacity: .55; cursor: default; box-shadow: none; }
 .thermal-note-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .thermal-note-card { min-height: 230px; padding: 32px; }
